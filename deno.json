@@ -4,11 +4,6 @@
   },
   "imports": {
     "hono/": "https://deno.land/x/hono@v4.3.2/",
-    "vento/": "https://deno.land/x/vento@v0.9.1/"
-  },
-  "scopes": {
-    ".": {
-      "vento/": "./patch/vento@v0.9.1/"
-    }
+    "vento/": "./patch/vento@v0.9.1/"
   }
 }
