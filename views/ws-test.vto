@@ -1,0 +1,19 @@
+{{ layout "layout.vto" { title: "websocket test" } }}
+<div class="flex flex-col justify-center items-center min-h-screen text-center">
+  <p class="font-bold text-5xl text-amber-500 dark:text-amber-400">
+    websocket test
+  </p>
+  <p id="server-msg-count" class="font-bold text-6xl dark:text-amber-200">
+    {{ count }}
+  </p>
+  <p class="font-bold dark:text-amber-200">
+    messages received from server
+  </p>
+  <small class="dark:text-amber-200">socket status: <span id="socket-status"></span></small>
+</div>
+<script type="module">
+    import { wsConnect } from "/static/js/ws.js";
+
+    wsConnect();
+</script>
+{{ /layout }}

@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "DENO_ENV=dev deno serve --allow-read --allow-env --allow-net --unstable-kv --unstable-hmr mod.ts"
+  },
+  "imports": {
+    "hono/": "https://deno.land/x/hono@v4.3.2/",
+    "vento/": "https://deno.land/x/vento@v0.9.1/"
+  },
+  "scopes": {
+    ".": {
+      "vento/": "./patch/vento@v0.9.1/"
+    }
+  }
+}
