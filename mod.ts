@@ -10,8 +10,10 @@ app.route("/", index);
 app.route("/", ws);
 app.use("/static/*", serveStatic({ root: "./" }));
 
-export default {
-  fetch(request: Request) {
-    return app.fetch(request);
-  },
-};
+// export default {
+//   fetch(request: Request) {
+//     return app.fetch(request);
+//   },
+// };
+
+Deno.serve(app.fetch);
