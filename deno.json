@@ -1,16 +1,10 @@
 {
   "tasks": {
-    "dev": "DENO_ENV=dev deno serve --allow-read --allow-env --allow-net=localhost --unstable-hmr mod.ts"
+    "dev": "DENO_ENV=dev deno run --allow-read --allow-env --allow-net --watch=\"./views/*.vto,\" dev.ts"
   },
   "imports": {
     "hono/": "https://deno.land/x/hono@v4.3.2/",
     "vento/": "https://deno.land/x/vento@v0.9.1/"
   },
-  "unstable": ["kv"],
-  "lint": {
-    "exclude": ["patch/", "static/js/tailwindcss.js"]
-  },
-  "fmt": {
-    "exclude": ["patch/", "static/js/tailwindcss.js"]
-  }
+  "unstable": ["kv"]
 }
