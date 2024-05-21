@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "DENO_ENV=dev deno serve --allow-read --allow-env --allow-net --unstable-kv --unstable-hmr mod.ts"
+    "dev": "DENO_ENV=dev deno run --allow-read --allow-env --allow-net --unstable-hmr mod.ts"
   },
   "imports": {
     "hono/": "https://deno.land/x/hono@v4.3.2/",

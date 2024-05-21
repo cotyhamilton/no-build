@@ -9,8 +9,11 @@ const STATUS = {
  * @param {STATUS} status
  */
 export const wsConnect = (count = 0, status = STATUS.CONNECTING) => {
-  const ws = new WebSocket("ws://localhost:8000/ws");
-
+  const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+  const wsHost = window.location.hostname;
+  const wsPort = window.location.port ? `:${window.location.port}` : "";
+  const wsUrl = `${wsProtocol}//${wsHost}${wsPort}/ws`;
+  const ws = new WebSocket(wsUrl);
   ws.onopen = (_event) => {
     status = STATUS.CONNECTED;
     document.getElementById("socket-status").innerHTML = status;
